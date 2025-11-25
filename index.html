@@ -1,12 +1,12 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[ yes ] border:, margin:, and padding: 
+[ yes ] Three Images
 
 Select TWO Additional Features to Add  
-[ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 1 - Flexbox
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
@@ -20,13 +20,284 @@ Select TWO Additional Features to Add
 <head>
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+
+ 
   <style>
+
+    
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #988a70;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.main{
+display: flex;
+justify-content: space-around;}
+
+body{color: rgb(119, 56, 11); 
+  font-family: "Fondamento", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-image: url(https://media.istockphoto.com/id/1155604893/vector/a-grunge-faded-vector-illustration-of-usa-flag.jpg?s=612x612&w=0&k=20&c=ERHuWGB6VRGRBmGI5oifKsyEmkj-vcH9v5bFZGb9cOA=);
+  background-repeat:no-repeat;
+  background-size:cover;
+  
+}
+
+
+.contain{background-color: bisque;}
+
+.content{background-color:rgb(236, 208, 165);}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2, p {
+  margin: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #917247;
+
+        
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #8b6024;
+  position:
+}
+    
+.listy{
+  background-color:bisque; 
+  margin:auto;
+  width: fit-content;
+  display: flex; 
+  }
+
+.cuts{background-color:rgb(221, 194, 161);
+display:flex;
+
+justify-content: space-between
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+
+.container div {
+  background-color: #ceae89;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 20px;
+}
+
 
   </style>
 </head>
 <body>
 
- 
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="time.html">Timeline</a></li>
+      <li><a href="procon.html">Pros/Cons </a></li>
+      <li><a href="source.html">Sources</a></li>
+    </ul>
+
+
+<div class="contain">
+    <img
+      src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/portrait-of-thomas-paine?_a=BAVAZGID0"
+      width="200"
+       class="content"
+    />
+    <h1 class="content">
+      Thomas Paine - The Voice of The American Revolution
+    </h1>
+    </div>
+<h2 > Why I chose Thomas Paine</h2>
+  <p >Thomas Paine has always interested me because he is a significant voice of the revolution without being a general, president, or wealthy person. He was an ordinary man who sparked an extraordinary change in the history of the United States through his writing and words. His famous written piece called "Common Sense" is a pamphlet that convinced dozens of colonists to step up in the revolution and fight for their freedom. Thomas Paine brought Europe's enlightenment into a form of words that the colonists could understand.
+
+</p>
+
+<h2 >Early Life</h2>
+<p >Thomas Paine was born in 1737 in Thetford, England. His father was a Quaker and his mother was an Anglican. Because of their contrasting beliefs, Paine was exposed to different opinions about freedom, religion, civil morality, etc. Thomas Paine's education was cut short when he was 13, but he had already established a strong work ethic and capability to read, write, and learn. Also when he was 13 years old, he began working with his father as a corset maker. As time progressed, he tried more and more jobs, all of which were unsuccessful. He even had two unsuccessful marriages. Paine's job as an excise worker made him aware of unfair taxes and policies put against citizens. He was fired from his job for putting out a strongly opinionated statement. And when he appeared hopeless, he met Benjamin Franklin. He encouraged Paine to start a new life, and Paine moved to Philadelphia in 1774. In America, he became a political writer. He spoke out frequently about common enlightened topics, such as natural rights, equality, etc.
+
+</p>
+
+<h2> Main Influence</h2>
+
+  <div class="main">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://moar-prod.imgix.net/7365405d-3696-408e-a608-857f91aaf417/image_rtr_Common_Sense.jpg?auto=compress%2Cformat&fit=min&fm=jpg&rect=0%2C19%2C1200%2C675" alt="Common Sense" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Common Sense</h1>
+      <p>Common Sense (1776) was the pamphlet that changed everything. Paine argued plainly and boldly that the colonists must declare independence from Britain. Within the pamphlet, he attacked monarchy, promoted a Republican government and inspired thousands of undecided colonists with his logic. It was written in a blunt manner so that even people with a low education could understand the text. With over 150,000 copies sold, it became the most influential piece of writing in the Revolution. 
+
+</p>
+    </div>
+  </div>
+</div>
+   
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://www.baumanrarebooks.com/blog/wp-content/uploads/2014/02/number-1.jpg" alt="Amercian Crisis" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1> The American Crisis</h1>
+      <p>The American Crisis was a series of essays written to motivate The Continental Army during the Revolutionary War. It criticized loyalists, It was distributed by George Washington to the soldiers throughout the duration of the war. The famous opening line, "These are the times that tried men's souls.", boosted morale during the darkest periods of battle.
+</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://oll-resources.s3.us-east-2.amazonaws.com/oll3/store/titles/798/Thomas_Paine%2C_Rights_of_Man%2C_1791.jpg" alt="The rights of man" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>The Rights of Man</h1>
+      <p>The Rights of Man was also a piece written by Thomas Paine that was primarily used during the French Revolution, which stated that the government was created to support natural human rights. Paine took influence from famous philosophers like John Locke and continued to be an outstanding voice for the equality of man.
+</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>Significance And Impact</h2>
+<div class="container">
+  <div><b>Political</b><br> 
+  <br>
+-Convinced colonists that independence was necessary 
+-Influenced early ideas of natural rights and republican governments. <br>
+-Helped turn enlightenment ideas into a popular movement <br>
+-Advocated that citizens have the right to govern themselves.
+</div>
+  <div><b>Social</b><br>
+  <br>
+-Encouraged ordinary people to see themselves as part of a bigger cause and take action in the fight for independence <br>
+-Helped unite colonists of different classes and regions <br>
+-Proposed social benefits to address poverty through a system of universal, government funded social insurances
+</div>
+  <div><b>Cultural</b><br>
+  <br>
+-Shifted American identity from being previously British <br> 
+-His writing style shaped American communication and journalism <br>
+-Proposed social benefits to address poverty through a system of universal government-funded social insurances<br>
+</div>  
+  
+</div>
+<br>
+
+<div class="container">
+ <div> <img  src="https://www.meisterdrucke.us/kunstwerke/1260px/Unknown_artist_-_Thomas_Paine_%281737-1809%29_British_writer_and_politician_holding_Human_Rights_-_%28MeisterDrucke-927778%29.jpg" width="300"></div>
+<div> <p><br><br> Thomas Paine had a massive impact on America and the world's political, social, and cultural ideology. His ideas helped shape the direction of the entire American Revolution, and it's easy to say that without him, America would not be an independent country, because it wouldn't have had the support from its citizens and colonists. His political message from common sense helped bring together the Continental Congress and later structure the Declaration of Independence, as other significant figures of world history began looking at Thomas Paine's writing as influence. Paine spread enlightenment ideas and helped them become a baseline in the creation of a government. Thomas Paine’s writings spanned from influencing free thought and challenging authority,  to motivating soldiers and influencing laws passed by later presidents. 
+</p> </div>
+</div>
+
+
+<br> 
+<h1>Primary Source Analysis 
+</h1>
+
+<div class="listy">
+  <br>
+<p >Quote from Common Sense (1776):<p>
+<h2 >“The cause of America is in a great measure the cause of all mankind.”
+</h2>
+<p>This quote from Paine’s pamphlet shows that the American revolution was not only a political dispute but a moral fight for the future of human freedom and natural rights. He wanted colonists to see independence as a global responsibility. Paine used early developed logos, pathos and ethos (my AP Lang teacher would be proud) to convince the undecided colonists to join the fight for freedom, and that their actions would inspire the world and future generations. This quote summarizes and symbolizes Tom Paine’s belief in universal liberty.
+</p>
+</div>
+
+<h1>Secondary Source Analysis 
+</h1>
+
+<div class="listy">
+  <br>
+<p >John Adam's Autobiography (1802):<p>
+<h2 >"I dreaded the effect so popular a pamphlet might have among the people, and determined to do all in my Power to counteract the effect of it." 
+</h2>
+<p>
+This secondary source is from John Adams, seen in his autobiography in the early 1800s. He was a significant figure in the American revolution and creation of the US. The quote from John Adams really goes to show the significance that Thomas Paine’s words had on society. It influenced but also frightened many rulers because they saw how easily the citizens were convinced by a single pamphlet. Adams admits that Common Sense had a tremendous power over public opinion, so much that he considered it dangerous. Adam’s reaction shows a divide in the revolution; Paine believed that people should have political power, while Adams believed that ordinary citizens having too much political power would turn into mob rule or instability. He claims he will do whatever he can to minimize the effect of Paine’s words onto the public. 
+
+</p>
+</div>
+<br>
+
+<h2>Conclusion</h2>
+
+<p>
+Thomas Paine was one of the most influential thinkers of the revolutionary era. His ideas transformed the pathway of how the United States developed. His writings influenced public opinion, inspired independence, and strengthened morale. Paine fulfilled his goal of spreading enlightenment ideas based off of John Locke, Proving that powerful ideas can change the world, although some of his later writings were controversial, Pain's influence on America was overwhelmingly positive. He inspired future generations and helped to found the nation's constitution. If I had to compare him to someone modern today, I would compare him to impactful journalists or activists who use their platform to challenge the government and inspire social change. Thomas Paine remains a powerful example of how one voice can spark a revolution.
+</p>
+
+<br>
+<br>
+
 
 </body>
 </html>
